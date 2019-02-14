@@ -1,0 +1,74 @@
+@import 'common.scss';
+@import 'myscss.scss';
+* {
+    @include sizing;
+}
+
+.wrapper {
+    @include num($w, $h);
+    display: flex;
+    flex-direction: column;
+    background: #F0F0F0;
+    .header {
+        @include num($w, pr(44px));
+        display: flex;
+        align-items: center;
+        p {
+            @include num(pr(20px), pr(20px));
+            margin: 0 pr(10px);
+            img {
+                @include num($w, $h);
+            }
+        }
+        div {
+            flex: 1;
+        }
+    }
+    .main {
+        flex: 1;
+        width: 100%;
+        overflow: auto;
+        .main-ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border-bottom: pr(1px) solid #E5E5E5;
+            padding: pr(20px) 0;
+            li {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                div {
+                    @include num(pr(50px), pr(50px));
+                    margin-bottom: pr(5px);
+                    img {
+                        @include num($w, $h);
+                    }
+                }
+                p {
+                    font-size: pr(14px);
+                }
+            }
+        }
+    }
+    .footer {
+        @include num($w, pr(200px));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid #E5E5E5;
+        div {
+            @include num(pr(40px), pr(40px));
+            margin-right: pr(10px);
+            img {
+                @include num($w, $h);
+            }
+        }
+        p {
+            @include num(pr(200px), pr(40px));
+            img {
+                @include num($w, $h);
+            }
+        }
+    }
+}
